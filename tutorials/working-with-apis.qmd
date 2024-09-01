@@ -224,7 +224,9 @@ We'll also skip the videos in "probably_no_public_comments," but if you want to 
 collect = has_public_comments
 # collect = has_public_comments + probably_no_public_comments
 
-overwrite = False # set this to true the first time you run it; then false
+# set this to true the first time you run it; then false
+# overwrite = True 
+overwrite = False 
 ```
 
 With this prep work done, we can collect comment data using the collect_comments_for_videos() function, which iterates over a list of video IDs and collects comments for each video. It starts by opening a CSV file to store the comments. If overwrite is True (see the code block above), it will create a new file; otherwise, it appends to an existing file. For each video, it calls the get_video_comments() function, which fetches the comments using the YouTube API. The comments are then written to the CSV file in real-time.
