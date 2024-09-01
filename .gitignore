@@ -9,6 +9,7 @@
 __pycache__/
 *.so
 tutorials/output/*.csv
+tutorials/output/*.json
 *DS_Store
 
 
