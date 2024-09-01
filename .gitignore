@@ -8,7 +8,7 @@
 *.pyc
 __pycache__/
 *.so
-tutorials/output/
+tutorials/output/*.csv
 *DS_Store
 
 
