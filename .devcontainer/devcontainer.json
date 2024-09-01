@@ -1,15 +1,7 @@
 {
-	"name": "poetry3-poetry-pyenv",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
-	// "features": {},
-	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-	// 👇 Use 'postCreateCommand' to run commands after the container is created.
+	"name": "data-collection",
+	"image": "mclevey/data-collection:latest",
 	"postCreateCommand": "poetry install",
-	// 👇 Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -27,6 +19,33 @@
 		"ghcr.io/devcontainers/features/python:1": {},
 		"ghcr.io/rocker-org/devcontainer-features/miniforge:1": {}
 	},
-	// 👇 Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "root"
 }
+
+// ALTERNATIVELY, use the following to build the image from the local Dockerfile
+
+// {
+// 	"name": "data-collection",
+// 	"build": {
+// 		"dockerfile": "Dockerfile"
+// 	},
+// 	"postCreateCommand": "poetry install",
+// 	"customizations": {
+// 		"vscode": {
+// 			"extensions": [
+// 				"ms-python.python",
+// 				"njpwerner.autodocstring",
+// 				"ms-toolsai.jupyter",
+// 				"ms-vscode-remote.remote-containers",
+// 				"quarto.quarto",
+// 				"ms-azuretools.vscode-docker",
+// 				"mechatroner.rainbow-csv"
+// 			]
+// 		}
+// 	},
+// 	"features": {
+// 		"ghcr.io/devcontainers/features/python:1": {},
+// 		"ghcr.io/rocker-org/devcontainer-features/miniforge:1": {}
+// 	},
+// 	"remoteUser": "root"
+// }
