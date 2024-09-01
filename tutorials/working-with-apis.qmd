@@ -119,11 +119,6 @@ import pandas as pd
 import src.youtube as yt
 import src.cleaners as clean
 import src.utils as utils
-
-# import icsspy
-# import icsspy.utils as utils
-# import icsspy.youtube as yt
-# import icsspy.cleaners as clean
 ```
 
 We can load our API key(s) using a utility function from icsspy and then initialize the YouTubeAPI class I developed to simplify using multiple API keys at once,^[Follow the instructions above to make sure you have your .env file setup correctly.] which is useful if you need to switch between them due to rate limits.
