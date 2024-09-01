@@ -1,10 +1,17 @@
 #!/bin/bash
 
-docker buildx create --use
+IMAGE_NAME="mclevey/data-collection"
+BUILDER_NAME="multiarch-builder"
 
-echo "Building multi-platform image (linux/amd64 for codespaces and linux/arm64 for macOS with Apple Silicon)."
+if ! docker buildx inspect "$BUILDER_NAME" >/dev/null 2>&1; then
+    echo "Creating a new buildx builder instance with the docker-container driver..."
+    docker buildx create --name "$BUILDER_NAME" --driver docker-container --use
+else
+    echo "Using existing buildx builder instance: $BUILDER_NAME"
+    docker buildx use "$BUILDER_NAME"
+fi
 
-docker build --platform linux/amd64,linux/arm64 -t data-collection:latest -f .devcontainer/Dockerfile .
-docker push mclevey/data-collection:latest
+docker buildx inspect --bootstrap
 
-echo "Multi-platform image built and pushed to Docker Hub"
+echo "Building multi-platform image (linux/amd64 for Codespaces and linux/arm64 for macOS with Apple Silicon)..."
+docker buildx build --platform linux/amd64,linux/arm64 -t "$IMAGE_NAME:latest" -f .devcontainer/Dockerfile --push .
