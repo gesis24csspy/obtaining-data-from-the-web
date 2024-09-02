@@ -2,8 +2,8 @@
 
 ## Tutorial Notebooks
 
-- [tutorials/1-scraping-the-web.qmd](tutorials/python-programming-1.qmd)
-- [tutorials/2-working-with-apis.qmd](tutorials/python-programming-2.qmd)
+- [tutorials/1-scraping-the-web.qmd](tutorials/1-scraping-the-web.qmd)
+- [tutorials/2-working-with-apis.qmd](tutorials/2-working-with-apis.qmd)
 
 ## How to Use these Materials
 
