@@ -1,6 +1,15 @@
-# Working with APIs
+# Obtaining Data from the Web
 
-# Instructions
+## Tutorial Notebooks
+
+- [tutorials/1-scraping-the-web.qmd](tutorials/1-scraping-the-web.qmd)
+- [tutorials/2-working-with-apis.qmd](tutorials/2-working-with-apis.qmd)
+
+## How to Use these Materials
+
+You can run the code in this repository using [GitHub CodeSpaces](https://github.com/features/codespaces). More instructions coming soon.
+
+# Store Your YouTube API Keys in an .env File
 
 To work with this project in GitHub Codespaces, you will need to set up your own environment variables, such as API keys, using a .env file. Follow the steps below to ensure your environment is configured correctly:
 
