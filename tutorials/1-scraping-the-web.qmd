@@ -479,7 +479,8 @@ Let's select the dataframes with a "Life evaluation" column.^[Gallupe's **Life e
 ```{python}
 new_columns = {
   "Country": "Country or region",
-  "Score": "Life evaluation"
+  "Score": "Life evaluation",
+  "Happiness": "Life evaluation"
 }
 
 for df in tables_with_years:
